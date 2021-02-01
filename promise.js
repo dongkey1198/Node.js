@@ -1,0 +1,20 @@
+const condition = false; // true면 reslove, false면 reject
+const promise = new Promise((resolve, reject) => {
+    if(condition){
+        resolve('성공');
+    } else{
+        reject('실패');
+    }
+}); 
+
+promise.then((message)=>{
+    console.log(message);
+})
+.catch((error) => {
+    console.error(error);
+});
+
+async function main(){
+    const result = await promise;
+    return 'zerocho';
+}
